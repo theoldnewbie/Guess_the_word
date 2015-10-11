@@ -1,12 +1,13 @@
 .btn_word {
 	background: linear-gradient(orange 0%,yellow 100%);
- 	color: black;
+ 	color: #009ACD;
 	font-size: 25px;
 	width: 50px;
 	height: 50px;
 	text-align: center;
 	border-radius: 50px;
 	text-transform: uppercase;
+	font-weight: bolder;
 }
 .btn {
 	background: linear-gradient(orange 0%,yellow 100%);
@@ -42,7 +43,7 @@ input {
 	height: 40px;
 	text-align: center;
 	font-size: 25px;
-	border-color: lime;
+	border-color: #104E8B;
 }
 body{
 	background-image: url(http://www.radionetplus.ru/uploads/posts/2013-05/1369460629_panda-1.jpeg);
@@ -54,7 +55,7 @@ h2{
 }
 h3{
 	font-variant: small-caps;
-	color: #FFD700;
+	color: #EEB422;
 	text-align: right;
 	margin-right: 50px;
 
@@ -67,7 +68,7 @@ h3{
 	font-style: normal;
 	color: orange;
 }
-#log {
+#head {
 	font-size: 70px;
 	color: #EE7600;
 	text-align: center;
