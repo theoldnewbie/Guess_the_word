@@ -32,6 +32,7 @@
 }
 
 .second {
+	color: #FFF68F;
 	text-align: center;
 	font-style: italic;
 	font-size: 25px;
@@ -44,7 +45,7 @@ input {
 	border-color: lime;
 }
 body{
-	background: #0bc408;
+	background-image: url(http://www.radionetplus.ru/uploads/posts/2013-05/1369460629_panda-1.jpeg);
 	text-align: center;
 }
 
@@ -52,7 +53,22 @@ h2{
 	color: yellow;
 }
 h3{
-	color: red;
+	font-variant: small-caps;
+	color: #FFD700;
 	text-align: right;
 	margin-right: 50px;
+
+}
+#title {
+	margin-bottom: 50px;
+	font-size: 50px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	font-style: normal;
+	color: orange;
+}
+#log {
+	font-size: 70px;
+	color: #EE7600;
+	text-align: center;
 }
