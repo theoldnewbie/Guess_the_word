@@ -1,20 +1,21 @@
 .btn_word {
 	background: linear-gradient(orange 0%,yellow 100%);
- 	color: #000080;
-	font-size: 25px;
-	width: 50px;
-	height: 50px;
+ 	color: #009ACD;
+	font-size: 40px;
+	width: 60px;
+	height: 60px;
 	text-align: center;
 	border-radius: 50px;
 	text-transform: uppercase;
 	font-weight: bolder;
 }
 .btn {
-	background: linear-gradient(orange 0%,yellow 100%);
- 	color: black;
+	background: linear-gradient(to bottom, #3A5FCD 0%,#63B8FF 100%);
+ 	color: #FFD700;
 	font-size: 25px;
 	text-align: center;
 	border-radius: 10px;
+	padding: 2px;
 }
 .btn_start {
 	background: linear-gradient(to bottom, #3A5FCD 0%,#63B8FF 100%);
@@ -25,12 +26,14 @@
 	text-align: center;
 	border-radius: 10px;
 	font-family: cursive;
+	margin-top: 200px;
 }
 .first {
 	text-align: center;
 	font-style: oblique;
 	font-size: 23px;
 	color: blue;
+	margin-bottom: 20px;
 }
 
 .second {
@@ -45,10 +48,9 @@ input {
 	text-align: center;
 	font-size: 30px;
 	border-color: #104E8B;
-	background: #000080;
+	background: linear-gradient(to bottom, #000080 0%,#63B8FF 100%);
 	font-variant: small-caps;
 	font-weight: bold;
-	color: #EEDD82;
 }
 body{
 	background-image: url(http://www.radionetplus.ru/uploads/posts/2013-05/1369460629_panda-1.jpeg);
@@ -56,26 +58,52 @@ body{
 }
 
 h2{
-	color: yellow;
+	color: #FFD700;
 	font-weight: bold;
 }
-h3{
+.heard{
 	font-variant: small-caps;
-	color: #EEB422;
+	color: #FF4500;
+	text-align: left;
+	margin-left: 50px;
+	overflow: hidden;
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+.score{
+	font-variant: small-caps;
+	color: #FF4500;
 	text-align: right;
 	margin-right: 50px;
-
-}
+	display: block;
+	float: right;
+	font-weight: bold;
+	}
 #title {
 	margin-bottom: 50px;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: bolder;
 	font-variant: small-caps;
 	font-style: normal;
 	color: orange;
 }
 #head {
-	font-size: 70px;
+	font-size: 60px;
 	color: #EE7600;
 	text-align: center;
+}
+#end {
+	font-variant: small-caps;
+	font-size: 30px;
+	color: #FF4500;
+	text-align: center;
+}
+#rules {
+	border: 2px solid #B0E0E6;
+	border-radius: 20px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 15px;
+	color: #FFFF66;
 }
