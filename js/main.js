@@ -30,6 +30,14 @@
 	];
 var arr1;
 var arr2 = ['_','_','_','_','_'];
+var $formInput = $('#form');
+var $inputLetter = $('#input');
+var $startBtn = $('#start');
+var $nextBtn = $('#next');
+var $restart = $('#restart');
+var score;
+var point = 0;
+var heard;
 
 var addRandomWord = function(){
 	var form = document.getElementById('form');
@@ -38,34 +46,34 @@ var addRandomWord = function(){
 	next.setAttribute('hidden', true);
 	arr2 = ['_','_','_','_','_'];
 
-
 	var num = Math.floor(Math.random() * (words.length - 0)) + 0;
 	arr1 = words[num].word;
-	$('#title').html(words[num].title);
+	$('#title').html(words[num].title + '?');
 	for(var i = 0; i<arr2.length; i++){
 		var id = i;
 		var btn = document.getElementById(id);
 			btn.innerHTML = '';
-		var log = document.getElementById('log');
-			log.innerHTML = '';
+		
 	}
-	
-	// event.preventDefault();
+	$('#heard').html(heard);
+	var log = document.getElementById('log');
+	log.innerHTML = '';
+	$inputLetter.attr('autofocus', true);
 };
-var startGame = function(event){
+var startGame = function(){
 	var page = document.getElementById('page');
 	page.removeAttribute('hidden');
 	var btnStart = document.getElementById('start');
 	btnStart.setAttribute('hidden', true);
+	var end = document.getElementById('end');
+	end.setAttribute('hidden', true);
+	heard = 5;
+	score = 0;
+	$('#score').html(score);
+
 	addRandomWord();
 }
 
-	var $formInput = $('#form');
-	var $inputLetter = $('#input');
-	var $startBtn = $('#start');
-	var $nextBtn = $('#next');
-	var score = 0;
-	var point = 0;
 	var letterText = (function(){
 			var _value = '';
 			return {
@@ -126,22 +134,36 @@ var startGame = function(event){
 
 			if(!haveSpace){
 				var h2 = document.getElementById('log');
-				h2.innerHTML = 'Слово отгадано, продолжим?';
+				h2.innerHTML = 'Слово отгадано, вы получили одну жизнь,продолжим?';
 				var form = document.getElementById('form');
 				form.setAttribute('hidden', true);
 				var next = document.getElementById('next');
 				next.removeAttribute('hidden');
+				heard++;
 
 			}
 		} else {
 			point = 0;
 			var h2 = document.getElementById('log');
 				h2.innerHTML = 'Неверная буква! Или эта буква уже была введена!';
+			heard--;
+			if(heard!=0){
+				$('#heard').html(heard);
+			} else {
+				var page = document.getElementById('page');
+				page.setAttribute('hidden', true);
+				var end = document.getElementById('end');
+				end.removeAttribute('hidden');
+				var log = document.getElementById('log');
+				log.innerHTML = '';
+				$('#you_score').html('Ваш счет: ' + score);
+			}
+			
 		}
 	};
-
 
 	$formInput.on('submit', onSubmitHandler);
 	$inputLetter.on('inputLetter:change', guessLetter);
 	$startBtn.on('click', startGame);
 	$nextBtn.on('click', addRandomWord);
+	$restart.on('click', startGame);
