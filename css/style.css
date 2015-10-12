@@ -45,9 +45,10 @@ input {
 	text-align: center;
 	font-size: 30px;
 	border-color: #104E8B;
-	background: #B0E0E6;
+	background: #000080;
 	font-variant: small-caps;
 	font-weight: bold;
+	color: #EEDD82;
 }
 body{
 	background-image: url(http://www.radionetplus.ru/uploads/posts/2013-05/1369460629_panda-1.jpeg);
