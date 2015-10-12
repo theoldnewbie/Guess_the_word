@@ -14,14 +14,26 @@
 	word4 = {
 		title: 'Предмет интерьера',
 		word: ['д','и','в','а','н']
-	}
+	},
+	word5 = {
+		title: '... Норушка',
+		word: ['м','ы','ш','к','а']
+	},
+	word6 = {
+		title: 'Часть механизма, за которую нужно дернуть',
+		word: ['р','ы','ч','а','г']
+	},
+	word7 = {
+		title: 'Круг 3D',
+		word: ['с','ф','е','р','а']
+	},
 	];
 var arr1;
 var arr2 = ['_','_','_','_','_'];
 
 var addRandomWord = function(){
-	var page = document.getElementById('page');
-	page.removeAttribute('hidden');
+	var form = document.getElementById('form');
+	form.removeAttribute('hidden');
 	var next = document.getElementById('next');
 	next.setAttribute('hidden', true);
 	arr2 = ['_','_','_','_','_'];
@@ -34,7 +46,8 @@ var addRandomWord = function(){
 		var id = i;
 		var btn = document.getElementById(id);
 			btn.innerHTML = '';
-
+		var log = document.getElementById('log');
+			log.innerHTML = '';
 	}
 	
 	// event.preventDefault();
@@ -114,8 +127,8 @@ var startGame = function(event){
 			if(!haveSpace){
 				var h2 = document.getElementById('log');
 				h2.innerHTML = 'Слово отгадано, продолжим?';
-				var page = document.getElementById('page');
-				page.setAttribute('hidden', true);
+				var form = document.getElementById('form');
+				form.setAttribute('hidden', true);
 				var next = document.getElementById('next');
 				next.removeAttribute('hidden');
 
