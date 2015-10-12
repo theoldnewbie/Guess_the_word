@@ -96,7 +96,7 @@ var addRandomWord = function(){
 };
 var startGame = function(){
 	$.ajax({
-  	dataType: 'jsonp',
+  	dataType: 'json',
   	method: 'GET',
   	async: false,
     url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
