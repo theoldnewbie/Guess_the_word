@@ -12,8 +12,15 @@
   <section id= "page" hidden>
       <div class="first">
 
+        <div class="score">
+          <p>Ваши очки:</p>
+          <p id="score"></p>
+        </div>
+        <div class="heard">
+          <p>Ваши жизни:</p>
+          <p id="heard"></p>
+        </div>
         
-        <h3>Ваши очки:</h3><h3 id="score">0</h3>
         <form id="title">
         </form>
 
@@ -26,27 +33,27 @@
       </div>
 
       <div class="second">
-
-        <br>Правила просты, перед вами поле из 5 клеток, за ним спрятано слово,
-        <br>вводите буквы в поле снизу, в случае правильно ответа появится 
-        <br>сообщение и правильная буква отобразится в своей ячейке.Ваш
-        <br>счет расположен в правом углу. За каждую правильную букву начисляется 100 баллов
-        <br>в случае череды правильных ответов баллы умножаются как количество правильных
-        <br>ответов подряд!   Удачной игры!!!
-        <br>
-
-        
+        <div id="rules">
+          Правила просты, перед вами поле из 5 клеток, за ним спрятано слово,
+          вводите буквы в поле снизу, в случае правильно ответа появится 
+          сообщение и правильная буква отобразится в своей ячейке.Ваш
+          счет расположен в правом углу. За каждую правильную букву начисляется 100 баллов
+          в случае череды правильных ответов баллы умножаются как количество правильных
+          ответов подряд!   Удачной игры!!!
+        </div>
         <form id="form">
           <h2>ВВЕДИТЕ БУКВУ</h2>
-          <input maxlength="1" size="1" id="input">
-          <button class="btn">Ввод</button>
-          <br>
-         
+          <input maxlength="1" size="1" id="input" required>
+          <button class="btn">Ввод</button>         
         </form>
       </div>
     </section> 
     <h2 id ="log"></h2>
     <button class="btn" id="next" hidden>Далее</button>
+    <div id="end" hidden>
+      <p id="you_score"></p>
+      <button class="btn" id="restart">Новая игра</button>
+    </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
