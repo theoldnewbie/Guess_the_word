@@ -96,12 +96,13 @@ var addRandomWord = function(){
 };
 var startGame = function(){
 	$.ajax({
-  	dataType: 'json',
+  	dataType: 'jsonp',
   	method: 'GET',
+  	async: false,
     url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
     success: function(data) {
-    	console.log(data);
-     words = data;
+    	console.log(data.words);
+     // words = data;
     },
     error: function(data) {
      console.error(data);
