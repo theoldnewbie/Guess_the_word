@@ -98,8 +98,9 @@ var startGame = function(){
 	$.ajax({
   	dataType: 'json',
   	method: 'GET',
-    url: '',
+    url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
     success: function(data) {
+    	console.log(data);
      words = data;
     },
     error: function(data) {
