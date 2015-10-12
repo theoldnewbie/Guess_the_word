@@ -101,7 +101,7 @@ var startGame = function(){
   	async: false,
     url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
     success: function(data) {
-    	console.log(data.words);
+    	console.log(data);
      // words = data;
     },
     error: function(data) {
