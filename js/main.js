@@ -1,61 +1,61 @@
-	var words = [
-	word1 = {
-		title: 'Один удар, четыре дырки.',
-		word: ['в','и','л','к','а']
-	},
-	word2 = {
-		title: 'Сирень на украинском',
-		word: ['б','у','з','о','к']
-	},
-	word3 = {
-		title: 'Основной ингридиент борща',
-		word: ['б','у','р','я','к']
-	},
-	word4 = {
-		title: 'Предмет интерьера',
-		word: ['д','и','в','а','н']
-	},
-	word5 = {
-		title: '... Норушка',
-		word: ['м','ы','ш','к','а']
-	},
-	word6 = {
-		title: 'Часть механизма, за которую нужно дернуть',
-		word: ['р','ы','ч','а','г']
-	},
-	word7 = {
-		title: 'Круг 3D',
-		word: ['с','ф','е','р','а']
-	},
-	word5 = {
-		title: 'Одежда',
-		word: ['д','ж','и','н','с','ы']
-	},
-	word6 = {
-		title: 'В тумане',
-		word: ['ё','ж']
-	},
-	word7 = {
-		title: 'Самая большая ягода',
-		word: ['а','р','б','у','з']
-	},
-	word8 = {
-		title: 'Воет на луну',
-		word: ['в','о','л','к']
-	},
-	word9 = {
-		title: 'Красный синьор',
-		word: ['п','о','м','и','д','о','р']
-	},
-	word10 = {
-		title: 'Симбад ...',
-		word: ['м','о','р','е','х','о','д']
-	},
-	word11 = {
-		title: 'Общий вид местности',
-		word: ['л','а','н','д','ш','а','ф','т']
-	},
-	];
+	var words = [];
+	// word1 = {
+	// 	title: 'Один удар, четыре дырки.',
+	// 	word: ['в','и','л','к','а']
+	// },
+	// word2 = {
+	// 	title: 'Сирень на украинском',
+	// 	word: ['б','у','з','о','к']
+	// },
+	// word3 = {
+	// 	title: 'Основной ингридиент борща',
+	// 	word: ['б','у','р','я','к']
+	// },
+	// word4 = {
+	// 	title: 'Предмет интерьера',
+	// 	word: ['д','и','в','а','н']
+	// },
+	// word5 = {
+	// 	title: '... Норушка',
+	// 	word: ['м','ы','ш','к','а']
+	// },
+	// word6 = {
+	// 	title: 'Часть механизма, за которую нужно дернуть',
+	// 	word: ['р','ы','ч','а','г']
+	// },
+	// word7 = {
+	// 	title: 'Круг 3D',
+	// 	word: ['с','ф','е','р','а']
+	// },
+	// word5 = {
+	// 	title: 'Одежда',
+	// 	word: ['д','ж','и','н','с','ы']
+	// },
+	// word6 = {
+	// 	title: 'В тумане',
+	// 	word: ['ё','ж']
+	// },
+	// word7 = {
+	// 	title: 'Самая большая ягода',
+	// 	word: ['а','р','б','у','з']
+	// },
+	// word8 = {
+	// 	title: 'Воет на луну',
+	// 	word: ['в','о','л','к']
+	// },
+	// word9 = {
+	// 	title: 'Красный синьор',
+	// 	word: ['п','о','м','и','д','о','р']
+	// },
+	// word10 = {
+	// 	title: 'Симбад ...',
+	// 	word: ['м','о','р','е','х','о','д']
+	// },
+	// word11 = {
+	// 	title: 'Общий вид местности',
+	// 	word: ['л','а','н','д','ш','а','ф','т']
+	// },
+	// ];
 var arr1;
 var arr2 = ['_','_','_','_','_','_','_','_'];
 var $formInput = $('#form');
@@ -94,20 +94,20 @@ var addRandomWord = function(){
 	$inputLetter.attr('autofocus', true);
 };
 var startGame = function(){
-	// $.ajax({
- //  	dataType: 'json',
- //  	method: 'GET',
- //  	async: false,
- //    url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
- //    success: function(data) {
- //    	var temp = data.response;
- //    	console.log(temp.words);
- //     	// words = temp.words;
- //    },
- //    error: function(data) {
- //     console.error(data);
- //    }
- // });
+	$.ajax({
+   	dataType: 'json',
+   	method: 'GET',
+   	async: false,
+     url: 'http://theoldnewbie.github.io/Guess_the_word/words.json',
+     success: function(data) {
+     	var temp = data.response;
+     	console.log(temp.words);
+      	words = temp.words;
+     },
+     error: function(data) {
+      console.error(data);
+     }
+  });
 	var page = document.getElementById('page');
 	page.removeAttribute('hidden');
 	var btnStart = document.getElementById('start');
